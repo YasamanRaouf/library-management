@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Library Management</title>
-</head>
-<body>
-    <h1>Book List</h1>
-    <ul>
-        {% for book in books %}
-            <li>
-                <a href="{% url 'book_detail' book.pk %}">{{ book.title }}</a>
-                - {{ book.author }}
-            </li>
-        {% endfor %}
-    </ul>
-    <a href="{% url 'book_new' %}">Add new book</a>
-</body>
-</html>
+{% extends 'library/base_generic.html' %}
+
+{% block title %}Book List{% endblock %}
+
+{% block content %}
+  <h1>Book List</h1>
+  <ul>
+    {% for book in books %}
+      <li>{{ book.title }} by {{ book.author }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

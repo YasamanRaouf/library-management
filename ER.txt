@@ -1,9 +1,9 @@
-+----------------+       +----------------+       +----------------+
-|    User        |       |    Book        |       |    Author      |
-+----------------+       +----------------+       +----------------+
-| UserID (PK)    |       | BookID (PK)    |       | AuthorID (PK)  |
-| Name           |       | Title          |       | Name           |
-| Email          |       | AuthorID (FK)  |       +----------------+
-+----------------+       | Price          |
-                         | PublicationDate|
-                         +----------------+
++----------------+
+|     Book       |
++----------------+
+| ID (PK)        |
+| Title          |
+| Author         |
+| Price          |
+| Publication Date|
++----------------+
